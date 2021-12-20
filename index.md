@@ -19,18 +19,18 @@ curl https://raw.githubusercontent.com/Tashima42/pomo/main/pomo.sh > ~/.local/bi
 ```
 
 ### Examples
-* Start a pomodoro with 20 minutes of focus time
+* Start a pomodoro with 20 minutes of focus time    
     ```bash
     pomo 20
     ```
-* 20 minutes of focus time and 3 minutes of break time
+* 20 minutes of focus time and 3 minutes of break time    
     ```bash
     pomo 20 3
     ```
-* 20 minutes of focus time, 3 minutes of break time and 10 minutes of long break
+* 20 minutes of focus time, 3 minutes of break time and 10 minutes of long break    
     ```bash
     pomo 20 3 10
-* 20 minutes of focus time, 3 minutes of break time, 10 minutes of long break and 4 cicles of focus until long break
+* 20 minutes of focus time, 3 minutes of break time, 10 minutes of long break and 4 cicles of focus until long break    
     ```bash
     pomo 20 3 10 4
     ```
