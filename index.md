@@ -10,8 +10,8 @@ Pomo is almost the simplest possible pomodoro timer.
 
 Attention: Always inspect scripts before running
 
-````bash
-curl https://raw.githubusercontent.com/Tashima42/pomo/main/install-pomo-sound.sh | bash
+```bash
+curl https://raw.githubusercontent.com/Tashima42/pomo/main/install-pomo-sound.sh | bash    
 ```
 
 ### Examples
