@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
+## Pomo, a simple CLI pomodoro timer
 
-You can use the [editor on GitHub](https://github.com/Tashima42/pomo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Pomo is almost the simplest possible pomodoro timer.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image](https://user-images.githubusercontent.com/23709916/146772035-9ee0885f-9102-4d96-bc76-6d141e3702c9.png)
 
-### Markdown
+**Pomo will notify you when it's time for a break, or time to focus.**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Installation
+Attention: Always inspect scripts before running
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+With sound notifications:
+```bash
+curl https://raw.githubusercontent.com/Tashima42/pomo/main/install-pomo-sound.sh | bash 
+```
+Without sound notifications:
+```bash
+curl https://raw.githubusercontent.com/Tashima42/pomo/main/pomo.sh > ~/.local/bin/pomo && sudo chmod +x ~/.local/bin/pomo
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Examples
+* Start a pomodoro with 20 minutes of focus time
+    ```bash
+    pomo 20
+    ```
+* 20 minutes of focus time and 3 minutes of break time
+    ```bash
+    pomo 20 3
+    ```
+* 20 minutes of focus time, 3 minutes of break time and 10 minutes of long break
+    ```bash
+    pomo 20 3 10
+* 20 minutes of focus time, 3 minutes of break time, 10 minutes of long break and 4 cicles of focus until long break
+    ```bash
+    pomo 20 3 10 4
+    ```
 
-### Jekyll Themes
+### Usage
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Tashima42/pomo/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+Usage: pomo [options] focus break long_break breaks_until_long
+    options            -h: display help message
+    focus              Minutes of focus until break      | Default = 25
+    break              Minutes of break until focus      | Default = 5
+    long_break         Minutes of long break until focus | Default = 15
+    breaks_until_long  Number of breaks until long break | Default = 4
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Uninstall:
+```bash
+rm ~/.local/bin/pomo
+rm -rf ~/.config/pomo
+```
